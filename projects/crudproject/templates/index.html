@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block body_block%}
+
+<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+<h1> Employee Information Dashboard </h1>
+<table border =2 text-align='center'>
+	<thead>
+		<th>Emp No</th>
+		<th>Name</th>
+		<th>Salary</th>
+		<th>Address</th>
+		<th>Actions</th>
+
+	</thead>
+	{% for i in form %}
+	<tr>
+		<td>{{i.eno}}</td>
+		<td>{{i.ename| title}}</td>
+		<td>{{i.esal}}</td>
+		<td>{{i.eadd}}</td>
+		<td><a href="/update/{{i.id}}">update</a> <a href="/delete/{{i.id}}"> delete </a></td>
+	</tr>
+	{%endfor%}
+
+	<a href="{%url 'insert' %}"> Insert Record page</a>
+
+</table>
+
+
+	{% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+	
+
+<h1>Please Register Here</h1>
+
+<div class="container">
+	
+	<form   method="POST" >
+
+
+		{{form.as_p}}
+
+		{%csrf_token%}
+
+		<input type="button" value="Submit">
+
+	
+	</form>
+
+
+	
+</div>
+<a href="{% url 'home' %}">Home page</a>
+</body>
+</html>

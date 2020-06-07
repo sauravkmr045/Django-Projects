@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %} 
+<html>
+
+
+<body>
+
+	<link rel="stylesheet" href="{% static 'home.css' %}"> 
+
+<h1>EMPLOYEE INFO</h1>
+<a href="{% url 'home' %}">Home page</a>
+</body>
+{%if emplist %}
+<table>
+	<thead>
+		<th>Employee No</th>
+		<th>Employee Name</th>
+		<th>Employee Salary</th>
+		<th>Employee Address</th>
+
+	</thead>
+	{% for i in emplist %}
+	<tr>
+		
+		<td>{{i.eno}}</td>
+		<td>{{i.ename}}</td>
+		<td>{{i.esal}}</td>
+		<td>{{i.eadd}}</td>
+	</tr>
+	{%endfor%}
+</table>
+
+{%else%}
+ <h1>No Employee Exist</h1>
+
+ {% endif %}
+
+<a href="{% url 'home' %}"></a>
+</body>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{%block body_block%}
+<h1>Please add the book which you want to insert</h1>
+<form method="POST">
+	{{form.as_p}}
+	{%csrf_token%}
+	<br>
+	<input type="submit" name="" value="Create new book/update">
+</form>
+{%endblock%}

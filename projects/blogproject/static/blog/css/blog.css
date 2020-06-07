@@ -1,0 +1,33 @@
+.content{
+
+	background: cyan;
+	width :70%;
+	float : left;
+	padding: 0 0 0 30px;
+	height: 100%;
+}
+
+.sidebar{
+
+	background: red;
+	width :30%;
+	float : right	;
+	padding: 10px;
+	height: 100%;
+}
+
+h1{
+	text-align: center;
+	border: 1px solid #bbb;	
+}
+body{
+	background: cyan;	
+
+}
+
+#date{
+
+	color:green;
+	font-style: italic;
+	font-size: 12px;
+}

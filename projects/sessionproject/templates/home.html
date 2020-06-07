@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<body
+
+
+<div class="container" text-align ='center'>
+<h1> Welcome to product Page</h1>
+<form mehtod ='POST', action="/">
+	{% csrf_token %}
+	 {{form.as_p}}
+	<input type="submit" name="" value="Submit">
+	<br><br>
+
+
+<a class="btn btn-primary" href="{%url  'display'%}" role="button">List of item</a>
+	
+
+</form>
+
+</div>
+</body>
+</html>

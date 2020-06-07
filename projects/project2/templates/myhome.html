@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %} 
+<html>
+
+
+<body>
+
+	<link rel="stylesheet" href="{% static 'home.css' %}"> 
+
+<h1>Student INFO</h1>
+<a href="{% url 'home' %}">Home page</a>
+</body>
+{%if data %}
+<table>
+	<thead>
+		<th>Student No</th>
+		<th>Student Name</th>
+		<th>Student Branch</th>
+		<th>Student class</th>
+
+	</thead>
+	{% load mytags %}
+	{% for i in data %}
+	<tr>
+		
+		<td>{{i.rollno}}</td>
+		<td>{{i.name | t_n}}</td>
+		<td>{{i.branch}}</td>
+		<td>{{i.cl}}</td>
+	</tr>
+	{%endfor%}
+</table>
+
+{%else%}
+ <h1>No Student Exist</h1>
+
+ {% endif %}
+
+ 
+
+<a href="{% url 'home' %}"></a>
+</body>
+
+</body>
+</html>
